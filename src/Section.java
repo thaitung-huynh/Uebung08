@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class Section implements TextComponent {
-    private String header;
-    private List<TextComponent> contents;
+    private final String header;
+    private final List<TextComponent> contents;
 
 
     public Section(String header, List<TextComponent> contents) {

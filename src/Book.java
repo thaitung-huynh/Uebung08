@@ -1,12 +1,11 @@
 
 import java.util.ArrayList;
 import java.util.List;
-//text git...
-// fix cho tai khoan yenbumbum
+
 public class Book {
-    private String title;
-    private String author;
-    private List<TextComponent> contents;
+    private final String title;
+    private final String author;
+    private final List<TextComponent> contents;
 
     public Book(String title, String author, List<TextComponent> contents) {
         this.title = title;

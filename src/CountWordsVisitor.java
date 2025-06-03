@@ -7,7 +7,16 @@ public class CountWordsVisitor implements Visitor<Integer> {
 
     public Integer visit(Paragraph paragraph) {
         String text = paragraph.getText();
-        return text.split("[^a-zA-Z]+").length;
+        boolean isWord = false;
+        int result = 0;
+        for (int i = 0; i < text.length(); ++i) {
+            if (('a' <= text.charAt(i) && text.charAt(i) <= 'z') || ('A' <= text.charAt(i) &&  text.charAt(i) <= 'Z')) isWord = true;
+            else {
+                if (isWord) result++;
+                isWord = false;
+            }
+        }
+        return result;
     }
 
     public Integer visit(Section section) {

@@ -103,7 +103,6 @@ public class BookDemo {
         System.out.println("Buch enthält " + book.countWords() + " Wörter");
 
         // Aufgabe 2
-
         System.out.println("Buch enthält " + book.countWordsByVisitor() + " Wörter");
         System.out.println("Inhalt: " + book.tableOfContents());
         System.out.println(book.toText());

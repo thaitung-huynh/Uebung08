@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class TableOfContentsVisitor implements Visitor<List<String>> {
 
-    private Stack<String> stack = new Stack<>();
+    private final Stack<String> stack = new Stack<>();
 
     public void pushInStack(String text) {
         stack.push(text);

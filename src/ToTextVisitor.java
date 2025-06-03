@@ -5,7 +5,7 @@ import java.util.Stack;
 public class ToTextVisitor implements Visitor<String> {
 
     private String indexImage = "";
-    private Stack<String> stack = new Stack<>();
+    private final Stack<String> stack = new Stack<>();
 
     public String visit(Image image) {
         return "<image " + image.getUrl() + ">\n" + "Fig. " + indexImage + ": " + image.getCaption() + "\n";
