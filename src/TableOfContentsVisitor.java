@@ -26,8 +26,7 @@ public class TableOfContentsVisitor implements Visitor<List<String>> {
         result.add(indexSection + " " + section.getHeader());
         int tmpSection = 1;
 
-        for (int i = 0; i < contents.size(); ++i) {
-            TextComponent content = contents.get(i);
+        for (TextComponent content : contents) {
             if (!content.getClass().getName().equals("Section")) continue;
             stack.push(indexSection + "." + (tmpSection++));
             List<String> tmp = content.accept(this);

@@ -16,6 +16,7 @@ public class CountWordsVisitor implements Visitor<Integer> {
                 isWord = false;
             }
         }
+        if (isWord) result++;
         return result;
     }
 

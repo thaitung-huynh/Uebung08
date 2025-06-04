@@ -26,6 +26,7 @@ public class Paragraph implements TextComponent {
                 isWord = false;
             }
         }
+        if (isWord) result++;
         return result;
     }
 }
